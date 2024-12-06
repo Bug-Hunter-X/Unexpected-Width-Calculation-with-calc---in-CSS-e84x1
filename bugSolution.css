@@ -1,0 +1,21 @@
+A more robust approach would involve setting a fixed width or using alternative layout techniques like flexbox or grid to achieve the desired spacing. For example:
+
+```css
+/* Solution using a fixed width parent */
+.parent {
+  width: 500px;
+}
+.container {
+  width: calc(50% - 10px);
+}
+
+/* Solution using flexbox */
+.parent {
+  display: flex;
+}
+.container {
+  width: calc(50% - 10px);
+  margin-right: 10px; /* Use margin to achieve the spacing instead of calc */
+}
+```
+These solutions offer greater control over the layout and prevent the unpredictable behavior caused by the original calc() expression.
